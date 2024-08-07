@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.AccessControl;
 using libreriaClase;
+using System.Collections.Generic; //
 
 namespace libreria
 {
@@ -8,13 +9,18 @@ namespace libreria
     class Pricipal{
         static void Main(){
 
+            List<Persona> listaPersona = new List<Persona>();
+
             string opcion = mostrarMenu();
 
             while ( opcion != "9") {
 
             if (opcion == "1"){
 
-                crearPersona();
+                listaPersona.Add(crearPersona());
+            }
+            if (opcion == "2"){
+                mostrarPersona(listaPersona);
             } 
             else
             {
@@ -25,6 +31,7 @@ namespace libreria
             opcion = mostrarMenu();
 
             }
+            
 
         }
 
@@ -50,6 +57,13 @@ namespace libreria
             Console.Write("Ingrese Fecha Nacimiento: ");
             p1.FechaNacimiento = Console.ReadLine();
 
+            return p1;
+
+        }
+        public static void mostrarPersona(List<Persona> personas){
+            foreach(var elem in personas){
+                Console.WriteLine(elem.Apellido);
+            }
         }
 
 
@@ -64,6 +78,7 @@ namespace libreria
 
             Console.WriteLine("");
             Console.WriteLine("1.- Crear Alumno");
+            Console.WriteLine("1.- Mostrar Alumno");
             Console.WriteLine("");
             Console.Write("Elija una opción: ");
 
