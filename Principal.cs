@@ -15,27 +15,29 @@ namespace libreria
 
             while ( opcion != "9") {
 
-            if (opcion == "1"){
-
+                switch(opcion)
+                {
+                case "1":
                 listaPersona.Add(crearPersona());
-            }
-            if (opcion == "2"){
+                break;
+                case "2":
                 mostrarPersona(listaPersona);
-            } 
-            else
-            {
+                break;
+                default:
                 Console.WriteLine("Opción Incorrecta...");
                 Console.ReadKey();
-            }
+                break;
 
-            opcion = mostrarMenu();
+                }
+
+                opcion = mostrarMenu();
 
             }
             
 
         }
 
-         public static void crearPersona(){
+         public static Persona crearPersona(){
 
             Console.Clear();
             Persona p1 = new Persona();
@@ -61,9 +63,22 @@ namespace libreria
 
         }
         public static void mostrarPersona(List<Persona> personas){
+            Console.Clear();
             foreach(var elem in personas){
+                Console.Write("Apellido: ");
                 Console.WriteLine(elem.Apellido);
+                Console.Write("Nombre: ");
+                Console.WriteLine(elem.Nombre);
+                Console.Write("DNI: ");
+                Console.WriteLine(elem.DNI);
+                Console.Write("Fecha de nacimiento: ");
+                Console.WriteLine(elem.FechaNacimiento);
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("------------------");
+
             }
+            Console.ReadKey();
         }
 
 
@@ -78,7 +93,7 @@ namespace libreria
 
             Console.WriteLine("");
             Console.WriteLine("1.- Crear Alumno");
-            Console.WriteLine("1.- Mostrar Alumno");
+            Console.WriteLine("2.- Mostrar Alumno");
             Console.WriteLine("");
             Console.Write("Elija una opción: ");
 
