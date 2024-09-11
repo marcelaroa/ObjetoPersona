@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/et12alumno/Escritorio/Carpeta sin título 2/objetoPersona/aprendiendoObjetos.csproj": {}
+    "/home/et12alumno/Escritorio/Carpeta sin título 2/ObjetoPersona/aprendiendoObjetos.csproj": {}
   },
   "projects": {
-    "/home/et12alumno/Escritorio/Carpeta sin título 2/objetoPersona/aprendiendoObjetos.csproj": {
+    "/home/et12alumno/Escritorio/Carpeta sin título 2/ObjetoPersona/aprendiendoObjetos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/Escritorio/Carpeta sin título 2/objetoPersona/aprendiendoObjetos.csproj",
+        "projectUniqueName": "/home/et12alumno/Escritorio/Carpeta sin título 2/ObjetoPersona/aprendiendoObjetos.csproj",
         "projectName": "aprendiendoObjetos",
-        "projectPath": "/home/et12alumno/Escritorio/Carpeta sin título 2/objetoPersona/aprendiendoObjetos.csproj",
+        "projectPath": "/home/et12alumno/Escritorio/Carpeta sin título 2/ObjetoPersona/aprendiendoObjetos.csproj",
         "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/Escritorio/Carpeta sin título 2/objetoPersona/obj/",
+        "outputPath": "/home/et12alumno/Escritorio/Carpeta sin título 2/ObjetoPersona/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/et12alumno/.nuget/NuGet/NuGet.Config"

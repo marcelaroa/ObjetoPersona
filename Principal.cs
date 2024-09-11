@@ -35,6 +35,10 @@ namespace libreria
                                 insertarPersona(listaPersona);
                                 break;
 
+                            case "5":
+                                Contador();
+                                break;
+
                             default:
                                 Console.WriteLine("Opción Incorrecta...");
                                 Console.ReadKey();
@@ -147,6 +151,29 @@ namespace libreria
 
 
         }
+
+        public static void Contador(){
+
+            conexionBD con  = new conexionBD();
+
+            con.conectar();
+
+
+            Console.Clear();
+            string Nombre;
+
+            Console.Write("Ingrese Nombre");
+            Nombre = Console.ReadLine();            
+            Console.WriteLine("");
+
+            
+
+            Console.WriteLine("El nombre ingresado existe {0} veces:", con.countPersonnameBD(Nombre));
+
+            Console.WriteLine("Presione una tecla para continuar....");
+            Console.ReadKey();
+
+        }
         public static string mostrarMenu(){
 
             string opcion;
@@ -161,6 +188,7 @@ namespace libreria
             Console.WriteLine("2.- Mostrar Alumnos");
             Console.WriteLine("3.- Buscar Alumno");
             Console.WriteLine("4.- Exportar Alumnos a BD");
+            Console.WriteLine("5.- Contar la cantidad de ...");
 
             Console.WriteLine("");
             Console.Write("Elija una opción: ");

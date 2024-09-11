@@ -85,5 +85,19 @@ namespace libreriaClase{
                 Conector.Close();        
 
         }
+        public object countPersonnameBD(string rNombre){
+
+            object cantidadObjeto;
+
+                Comando.CommandText = "select count(*) from Persona where Nombre = '"+ rNombre +"'";
+
+                Comando.CommandType = CommandType.Text;
+                Conector.Open();
+                cantidadObjeto = Comando.ExecuteScalar();                    
+                Conector.Close();     
+            
+            return cantidadObjeto;   
+
+        }
     }
 }
