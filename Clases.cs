@@ -101,16 +101,30 @@ namespace libreriaClase{
         }
         public void MostrarAlumno(){
 
+            // string sql = "select DNI, Apellido, Nombre from Persona where Apellido" 
+            string Sql = "select * from Persona";
+            Comando.CommandText = Sql; 
             Conector.Open();
-            string Sql = "select DNI, Apellido, Nombre from Persona where Apellido = fff";
-            Comando.CommandText = Sql;
             MySqlDataReader datos = Comando.ExecuteReader();
 
             while (datos.Read()){
-                Console.WriteLine(datos[0]+"..."+datos[1]);
+                Console.Write("Apellido: ");
+                Console.WriteLine(datos[2]);
+                Console.Write("Nombre: ");
+                Console.WriteLine(datos[3]);
+                Console.Write("DNI: ");
+                Console.WriteLine(datos[1]);
+                Console.Write("Fecha Nacimiento: ");
+                Console.WriteLine(datos[4]);
+                Console.WriteLine("-------------");
+
             }
+            // Console.WriteLine(datos[0]+"..."+datos[1]);
             datos.Close();
 
+        }
+        public static void EliminarBD(){
+            
         }
     }
 }

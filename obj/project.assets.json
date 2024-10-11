@@ -1612,11 +1612,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/et12alumno/Escritorio/Carpeta sin título 4/ObjetoPersona/aprendiendoObjetos.csproj",
+      "projectUniqueName": "/home/et12alumno/Escritorio/fvve/ObjetoPersona/aprendiendoObjetos.csproj",
       "projectName": "aprendiendoObjetos",
-      "projectPath": "/home/et12alumno/Escritorio/Carpeta sin título 4/ObjetoPersona/aprendiendoObjetos.csproj",
+      "projectPath": "/home/et12alumno/Escritorio/fvve/ObjetoPersona/aprendiendoObjetos.csproj",
       "packagesPath": "/home/et12alumno/.nuget/packages/",
-      "outputPath": "/home/et12alumno/Escritorio/Carpeta sin título 4/ObjetoPersona/obj/",
+      "outputPath": "/home/et12alumno/Escritorio/fvve/ObjetoPersona/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/et12alumno/.nuget/NuGet/NuGet.Config"
@@ -1664,7 +1664,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

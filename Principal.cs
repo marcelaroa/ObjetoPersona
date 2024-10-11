@@ -43,6 +43,11 @@ namespace libreria
                                 MostrarAlumnoBD();
                                 break;
 
+                            case "7":
+                                EliminarAlumnoBD();
+                                break;
+
+
                             default:
                                 Console.WriteLine("Opción Incorrecta...");
                                 Console.ReadKey();
@@ -99,6 +104,7 @@ namespace libreria
                 }
                 Console.ReadKey();
         }
+
 
     public static void buscarPersona(List<Persona> personas){
                 int dni;
@@ -185,12 +191,44 @@ namespace libreria
             con.conectar();
             Console.Clear();
             con.MostrarAlumno();
-
             Console.WriteLine("Presione una tecla para continuar");
             Console.ReadKey();
 
 
         }
+      public static void EliminarAlumnoBD(){
+                int dni;
+                int flag=0;
+                Console.Clear();
+                Console.Write("Ingrese DNI Persona a Eliminar: ");
+                dni = Convert.ToInt32(Console.ReadLine());
+
+                foreach(var elem in ){
+
+                    if ( elem.DNI == dni ){
+
+                        Console.Write("Apellido: ");
+                        Console.WriteLine(elem.Apellido);
+                        Console.Write("Nombre: ");
+                        Console.WriteLine(elem.Nombre);
+                        Console.Write("DNI:");
+                        Console.WriteLine(elem.DNI);
+                        Console.Write("Fecha Nacimiento:");
+                        Console.WriteLine(elem.FechaNacimiento);
+                        Console.WriteLine("----------------");
+
+                        Console.ReadKey();
+                        flag = 1;
+
+                    }
+
+                }
+                if (flag == 0){
+                    Console.WriteLine("Registro No Encontrado");
+                    Console.ReadKey();
+                }
+                
+      }
         public static string mostrarMenu(){
 
             string opcion;
@@ -207,6 +245,7 @@ namespace libreria
             Console.WriteLine("4.- Exportar Alumnos a BD");
             Console.WriteLine("5.- Contar la cantidad de ...");
             Console.WriteLine("6.- Mostrar alumnos de BD");
+            Console.WriteLine("7.- Eliminar alumnos de BD");
 
             Console.WriteLine("");
             Console.Write("Elija una opción: ");
